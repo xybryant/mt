@@ -252,11 +252,18 @@
 		line-height: 44px;
 		padding: 0 3px;
 		border-bottom:1px solid #e2e2e2; 
-		overflow: hidden;
+		/* overflow: hidden;
 		text-overflow:ellipsis;
-		white-space: nowrap;
+		white-space: nowrap; */
 		position: relative;
 		color: #444;
+		-webkit-line-clamp: 1;
+		display: -webkit-box;
+		/*! autoprefixer: off */
+		-webkit-box-orient: vertical;
+		/* autoprefixer: on */
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.menu-item a.current {
 		background-color: #fff;
@@ -359,8 +366,11 @@
 		padding-right: 5px;
 		-webkit-line-clamp: 1;
 		display: -webkit-box;
+		/*! autoprefixer: off */
 		-webkit-box-orient: vertical;
+		/* autoprefixer: on */
 		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.food-content .extra {
 		font-size: 10px;
